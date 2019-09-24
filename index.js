@@ -3,23 +3,23 @@
  * 
  * @example 
 
-    `const { promise, fullfil, reject } = promiser()`
+    `const { promise, fulfill, reject } = promiser()`
 
     Or 
     
     ```
       const promise = promiser(); 
-      promise.fullfil('foo');
+      promise.fulfill('foo');
     ```
  * 
  */
 export const promiser = () => {
-	const resolve = {}
-    const promise = new Promise(function(fullfil, reject) {
-        Object.assign(resolve, { fullfil, reject })
+    const resolve = {}
+    const promise = new Promise(function(fulfill, reject) {
+        Object.assign(resolve, { fulfill, reject })
     })
-	Object.assign(promise, resolve, { promise })
-	return promise
+    Object.assign(promise, resolve, { promise })
+    return promise
 }
 
 export default promiser
