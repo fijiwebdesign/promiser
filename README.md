@@ -11,7 +11,7 @@ The syntax for fulfilling a promise is verbose:
   console.log('fulfilled promise', promise)
 ```
 
-And requires fullfillment within the scope of the passed in callback function. 
+And requires fulfillment within the scope of the passed in callback function. 
 
 The promiser utility is consise and within the same scope. 
 
