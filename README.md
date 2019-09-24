@@ -2,13 +2,13 @@
 
 Promise and resolution in the same scope
 
-The syntax for fullfilling a promise is verbose: 
+The syntax for fulfilling a promise is verbose: 
 
 ```
-  const promise = new Promise((fullfil, reject) => {
-    fullfil('foo')
+  const promise = new Promise((fulfill, reject) => {
+    fulfill('foo')
   })
-  console.log('fullfilled promise', promise)
+  console.log('fulfilled promise', promise)
 ```
 
 And requires fullfillment within the scope of the passed in callback function. 
@@ -18,14 +18,14 @@ The promiser utility is consise and within the same scope.
 ## Examples
 
  ```
-  const { promise, fullfil, reject } = promiser()
-  fullfil('foo')
-  console.log('fullfilled promise', promise)
+  const { promise, fulfill, reject } = promiser()
+  fulfill('foo')
+  console.log('fulfilled promise', promise)
  ```
     Or 
     
 ```
   const promise = promiser(); 
-  promise.fullfil('foo');
-  console.log('fullfilled promise', promise)
+  promise.fulfill('foo');
+  console.log('fulfilled promise', promise)
 ```
